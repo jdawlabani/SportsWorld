@@ -3,6 +3,8 @@ import axios from "axios";
 import "../App.css";
 import { Link } from "react-router-dom";
 
-const home = () => {
+const Home = () => {
+    const [standings, setStandings] = useState([]);
+    const [liveGames, setLiveGames] = useState([]);
     
 }
