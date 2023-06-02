@@ -1,27 +1,37 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "../App.css";
-import { Link } from "react-router-dom";
+
 
 const Home = () => {
-  const [standings, setStandings] = useState([]);
-  const [liveGames, setLiveGames] = useState([]);
+// WILL BE USED ONCE API IS CONNECTED
+//   const [standings, setStandings] = useState([]);
+//   const [liveGames, setLiveGames] = useState([]);
 
   var config = {
     method: "get",
-    url: "https://api-nba-v1.p.rapidapi.com/games",
+    url: "https://api-nba-v1.p.rapidapi.com/seasons",
     headers: {
       "x-rapidapi-key": "bdd2c9af47abe6ae0fd1f59672fcc1a7",
       "x-rapidapi-host": "api-nba-v1.p.rapidapi.com",
     },
   };
-  axios(config)
-    .then(function (response) {
+
+/*
+TO DO:
+  -LIVE GAMES (if any)
+  -Season standings (for NBA first)
+*/
+useEffect(()=> {
+    axios(config)
+    .then((response) => {
       console.log(JSON.stringify(response.data));
     })
-    .catch(function (error) {
+    .catch((error) => {
       console.log(error);
     });
+},[]);
+
 
   return (
     <div className="container">
