@@ -27,7 +27,7 @@ useEffect(()=> {
     .then((response) => {
       console.log(JSON.stringify(response.data));
     })
-    .catch((error) => {
+    .catch((error ) => {
       console.log(error);  
     });
 });
