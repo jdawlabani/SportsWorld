@@ -10,7 +10,7 @@ const Home = () => {
 
   var config = {
     method: "get",
-    url: "https://v2.nba.api-sports.io/standings?league=standard&season=2021",
+    url: "https://v2.nba.api-sports.io/standings?league=standard&season=2023",
     headers: {
       "x-rapidapi-key": "bdd2c9af47abe6ae0fd1f59672fcc1a7",
       "x-rapidapi-host": "api-nba-v1.p.rapidapi.com",
@@ -50,9 +50,12 @@ useEffect(()=> {
             </tr>
           </thead>
           <tbody>
-            {standings.forEach(() => {
+            {standings.map(() => {
               return (
-                
+                <tr key={team.id}>
+                  <td>{win.total}</td>
+                  <td>{loss.total}</td>
+                </tr>
               );
             })}
           </tbody>
