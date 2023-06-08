@@ -10,7 +10,7 @@ const Home = () => {
 
   var config = {
     method: "get",
-    url: "https://v2.nba.api-sports.io/standings?league=standard&season=2021",
+    url: "https://v2.nba.api-sports.io/standings?league=standard&season=2022",
     headers: {
       "x-rapidapi-key": "bdd2c9af47abe6ae0fd1f59672fcc1a7",
       "x-rapidapi-host": "api-nba-v1.p.rapidapi.com",
