@@ -10,7 +10,7 @@ const Home = () => {
 
   var config = {
     method: "get",
-    url: "https://v2.nba.api-sports.io/standings?league=standard&season=2022",
+    url: "https://v2.nba.api-sports.io/standings?league=standard&season=2021",
     headers: {
       "x-rapidapi-key": "bdd2c9af47abe6ae0fd1f59672fcc1a7",
       "x-rapidapi-host": "api-nba-v1.p.rapidapi.com",
@@ -25,8 +25,8 @@ TO DO:
 useEffect(()=> {
     axios(config)
     .then((response) => {
-      console.log(response.data);
-      setStandings(response.data);
+      setStandings(response.data.response);
+      console.log(response.data.response)
 
     })
     .catch((error) => {
@@ -39,7 +39,31 @@ useEffect(()=> {
     <div className="container">
       <div className="standings">
         <h2>Standings...</h2>
-        
+        <table>
+          <thead>
+            <tr>
+              <th>Team</th>
+              <th>Wins</th>
+              <th>Losses</th>
+              <th>Win %</th>
+              <th>GB</th>
+            </tr>
+          </thead>
+          <tbody>
+            {standings.forEach(function (team)) => {
+              return (<tr>
+                <th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                </th>
+              </tr>
+              );
+            }}
+          </tbody>
+        </table>
       </div>
       <div className="live">
         <h2>Live games...</h2>
