@@ -50,18 +50,11 @@ useEffect(()=> {
             </tr>
           </thead>
           <tbody>
-            {standings.forEach(function (team)) => {
-              return (<tr>
-                <th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                </th>
-              </tr>
+            {standings.forEach(() => {
+              return (
+                
               );
-            }}
+            })}
           </tbody>
         </table>
       </div>
