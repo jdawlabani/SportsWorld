@@ -39,7 +39,7 @@ useEffect(()=> {
     <div className="container">
       <div className="standings">
         <h2>Standings...</h2>
-        {/* <table>
+        <table className="table">
           <thead>
             <tr>
               <th>Team</th>
@@ -53,13 +53,13 @@ useEffect(()=> {
             {standings.map(() => {
               return (
                 <tr>
-                  <td>{win.total}</td>
-                  <td>{loss.total}</td>
+                  <td>{}</td>
+                  <td>{}</td>
                 </tr>
               );
             })}
           </tbody>
-        </table> */}
+        </table>
       </div>
       <div className="live">
         <h2>Live games...</h2>
