@@ -26,7 +26,7 @@ useEffect(()=> {
     axios(config)
     .then((response) => {
       setStandings(response.data.response);
-      console.log(response.data)
+      console.log(response.data.response);
 
     })
     .catch((error) => {
@@ -52,7 +52,7 @@ useEffect(()=> {
           <tbody>
             {standings.map(() => {
               return (
-                <tr key={team.id}>
+                <tr>
                   <td>{win.total}</td>
                   <td>{loss.total}</td>
                 </tr>
