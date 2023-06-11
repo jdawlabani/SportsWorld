@@ -33,10 +33,6 @@ TO DO:
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-    var first = standings[0]
-    console.log("THE FIRST")
-    console.log(first)
-
   return (
     <div className="container">
       <div className="standings">
