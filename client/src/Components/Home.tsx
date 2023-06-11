@@ -2,11 +2,10 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "../App.css";
 
-
 const Home = () => {
-// WILL BE USED ONCE API IS CONNECTED
+  // WILL BE USED ONCE API IS CONNECTED
   const [standings, setStandings] = useState([]);
-//   const [liveGames, setLiveGames] = useState([]);
+  //   const [liveGames, setLiveGames] = useState([]);
 
   var config = {
     method: "get",
@@ -17,48 +16,52 @@ const Home = () => {
     },
   };
 
-/*
+  /*
 TO DO:
   -LIVE GAMES (if any)
   -Season standings (for NBA first)
 */
-useEffect(()=> {
+  useEffect(() => {
     axios(config)
-    .then((response) => {
-      setStandings(response.data.response);
-      console.log(response.data.response);
+      .then((response) => {
+        setStandings(response.data.response);
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
-    })
-    .catch((error) => {
-      console.log(error);  
-    });
-}, []);
-
+    var first = standings[0]
+    console.log("THE FIRST")
+    console.log(first)
 
   return (
     <div className="container">
       <div className="standings">
         <h2>Standings...</h2>
-        <table className="table">
+        <table className="border">
           <thead>
             <tr>
               <th>Team</th>
               <th>Wins</th>
               <th>Losses</th>
               <th>Win %</th>
-              <th>GB</th>
             </tr>
           </thead>
-          <tbody>
-            {standings.map(() => {
+          {/* <tbody>
+            {standings.forEach((item) => {
               return (
                 <tr>
-                  <td>{}</td>
-                  <td>{}</td>
+                  <th>{item.team.name}</th>
+                  <th>{item.win.total}</th>
+                  <th>{item.loss.total}</th>
+                  <th>{item.win.percentage}</th>
                 </tr>
               );
             })}
-          </tbody>
+            ;
+          </tbody> */}
         </table>
       </div>
       <div className="live">
