@@ -16,6 +16,7 @@ const Home = () => {
     },
   };
 
+  
   /*
 TO DO:
   -LIVE GAMES (if any)
@@ -32,8 +33,7 @@ TO DO:
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  console.log("THIS IS THE RAW API DATA")
-  console.log(apidata);
+  console.log("THIS IS THE RAW API DATA", apidata)
   return (
     <div className="container">
       <div className="standings">
