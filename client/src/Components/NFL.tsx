@@ -3,7 +3,9 @@ import axios from "axios";
 import "../App.css";
 
 const NFL = () => {
-  const options = {
+    const [apidata, setApidata] = useState([]);
+
+  const config = {
     method: "GET",
     url: "https://nfl-api1.p.rapidapi.com/nflteamplayers",
     params: { teamid: "16" },
@@ -13,11 +15,15 @@ const NFL = () => {
     },
   };
 
-  try {
-    const response = await axios.request(options);
-    console.log(response.data);
-  } catch (error) {
-    console.error(error);
-  }
+  useEffect(() => {
+    axios(config)
+      .then((response) => {
+        setApidata(response.data.response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 };
 export default NFL;
