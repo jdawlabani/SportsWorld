@@ -4,7 +4,7 @@ import "../App.css";
 
 const Home = () => {
   // WILL BE USED ONCE API IS CONNECTED
-  const [standings, setStandings] = useState([]);
+  const [apidata, setApidata] = useState([]);
   //   const [liveGames, setLiveGames] = useState([]);
 
   var config = {
@@ -24,8 +24,7 @@ TO DO:
   useEffect(() => {
     axios(config)
       .then((response) => {
-        setStandings(response.data.response);
-        console.log(response.data);
+        setApidata(response.data.response);
       })
       .catch((error) => {
         console.log(error);
@@ -33,6 +32,8 @@ TO DO:
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  console.log("THIS IS THE RAW API DATA")
+  console.log(apidata);
   return (
     <div className="container">
       <div className="standings">
@@ -46,7 +47,15 @@ TO DO:
               <th>Win %</th>
             </tr>
           </thead>
-          
+          <tbody>
+            {apidata.map((row, index) => {
+              return (
+                <tr>
+                  <td></td>
+                </tr>
+              )
+            })}
+          </tbody>
         </table>
       </div>
       <div className="live">
