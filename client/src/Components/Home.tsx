@@ -46,19 +46,7 @@ TO DO:
               <th>Win %</th>
             </tr>
           </thead>
-          {/* <tbody>
-            {standings.forEach((item) => {
-              return (
-                <tr>
-                  <th>{item.team.name}</th>
-                  <th>{item.win.total}</th>
-                  <th>{item.loss.total}</th>
-                  <th>{item.win.percentage}</th>
-                </tr>
-              );
-            })}
-            ;
-          </tbody> */}
+          
         </table>
       </div>
       <div className="live">
