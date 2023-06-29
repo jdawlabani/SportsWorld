@@ -24,13 +24,14 @@ const NFL = () => {
       .catch((error) => {
         console.log(error);
       });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  });
 
   console.log(apidata);
   return (
     <>
-      <Link className="link" to={"/"}>Back to Home</Link>
+      <Link className="link" to={"/"}>
+        Back to Home
+      </Link>
       <h1>This is the NFL page.</h1>
     </>
   );
