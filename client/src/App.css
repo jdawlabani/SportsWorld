@@ -21,6 +21,14 @@
 .border{
   border: 2px solid red;
 }
+
+
+.link{
+  padding-top: 30px;
+  font-size: xx-large;
+  color: red;
+  font-weight: bolder;
+}
 /* .standings{
 
 }

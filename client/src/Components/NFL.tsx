@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "../App.css";
+import { Link } from "react-router-dom";
 
 const NFL = () => {
-    const [apidata, setApidata] = useState([]);
+  const [apidata, setApidata] = useState([]);
 
   const config = {
     method: "GET",
@@ -18,12 +19,20 @@ const NFL = () => {
   useEffect(() => {
     axios(config)
       .then((response) => {
-        setApidata(response.data.response);
+        setApidata(response.data);
       })
       .catch((error) => {
         console.log(error);
       });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  console.log(apidata);
+  return (
+    <>
+      <Link className="link" to={"/"}>Back to Home</Link>
+      <h1>This is the NFL page.</h1>
+    </>
+  );
 };
 export default NFL;
