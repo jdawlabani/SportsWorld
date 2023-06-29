@@ -5,6 +5,8 @@ const Home = () => {
   return <div className="container">
     <Link className="link" to={"/NFL"}>NFL</Link>
     <Link className="link" to={"/NBA"}>NBA</Link>
+    <Link className="link" to={"/MLB"}>MLB</Link>
+    <Link className="link" to={"/NHL"}>NHL</Link>
   </div>;
 };
 export default Home;
