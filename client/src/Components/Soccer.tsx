@@ -38,23 +38,6 @@ const Soccer = () => {
       <h1>
         This is the Soccer page. We are in season and will be updating soon!
       </h1>
-      <div className="standings">
-        <h2>Standings...</h2>
-        <table className="border">
-          <thead>
-            <tr>
-              <th>Team</th>
-              <th>Wins</th>
-              <th>Losses</th>
-              <th>Win %</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
-      <div className="live">
-        <h2>Live games...</h2>
-      </div>
     </div>
   );
 };

@@ -30,7 +30,7 @@ const MLB = () => {
 
   console.log(apidata);
   return (
-    <div className="block">
+    <div>
       <Link className="link" to={"/"}>
         Home
       </Link>
