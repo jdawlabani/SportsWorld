@@ -6,6 +6,7 @@ import NFL from  './Components/NFL'
 import NBA from './Components/NBA';
 import NHL from './Components/NHL';
 import MLB from './Components/MLB';
+import Soccer from './Components/Soccer';
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
         <Route path='/NBA' element = {<NBA />}></Route>
         <Route path='/NHL' element = {<NHL />}></Route>
         <Route path='/MLB' element = {<MLB />}></Route>
+        <Route path='/soccer' element = {<Soccer />}></Route>
+
+
       </Routes>
       </BrowserRouter>
     </div>

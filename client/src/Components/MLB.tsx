@@ -20,7 +20,7 @@ const MLB = () => {
   useEffect(() => {
     axios(config)
       .then((response) => {
-        setApidata(response.data.response);
+        setApidata(response.data);
       })
       .catch((error) => {
         console.log(error);
@@ -28,6 +28,7 @@ const MLB = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  console.log(apidata)
   return (
     <div className="container">
       <Link className="link" to={"/"}>
