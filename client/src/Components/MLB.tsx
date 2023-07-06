@@ -34,9 +34,9 @@ const MLB = () => {
       <Link className="link" to={"/"}>
         Home
       </Link>
-        <h1>
+        <h3>
           This is the MLB page. We are in season and will be updating soon!
-        </h1>
+        </h3>
         {/* <div className="standings">
           <h2>Standings...</h2>
           <table className="border">

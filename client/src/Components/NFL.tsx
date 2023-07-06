@@ -32,7 +32,10 @@ const NFL = () => {
       <Link className="link" to={"/"}>
         Back to Home
       </Link>
-      <h1>This is the NFL page.</h1>
+      <h3>This is the NFL page. Congrats to the Kansas City Cheifs
+        for winning Super Bowl 2023! Updates will be coming near the start
+        of netx season.
+      </h3>
     </>
   );
 };

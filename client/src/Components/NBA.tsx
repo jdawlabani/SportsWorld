@@ -35,34 +35,38 @@ TO DO:
 
   console.log("THIS IS THE RAW API DATA", apidata);
   return (
-    <div className="container">
-        <Link className="link" to={"/"}>Home</Link>
-      <div className="standings">
-        <h2>Standings...</h2>
-        <table className="border">
-          <thead>
-            <tr>
-              <th>Team</th>
-              <th>Wins</th>
-              <th>Losses</th>
-              <th>Win %</th>
-            </tr>
-          </thead>
-          <tbody>
-            {apidata.map((row, index) => {
-              return (
-                <tr>
-                  <td></td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+    <>
+      <Link className="link" to={"/"}>
+        Home
+      </Link>
+      <div className="container">
+        <div className="standings">
+          <h2>Standings...</h2>
+          <table className="border">
+            <thead>
+              <tr>
+                <th>Team</th>
+                <th>Wins</th>
+                <th>Losses</th>
+                <th>Win %</th>
+              </tr>
+            </thead>
+            <tbody>
+              {apidata.map((row, index) => {
+                return (
+                  <tr>
+                    <td></td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+        <div className="live">
+          <h2>Live games...</h2>
+        </div>
       </div>
-      <div className="live">
-        <h2>Live games...</h2>
-      </div>
-    </div>
+    </>
   );
 };
 export default NBA;
