@@ -5,6 +5,21 @@ import { Link } from "react-router-dom";
 
 const NHL = () => {
     
+
+
+  const config = {
+    method: 'GET',
+    url: 'https://api-hockey.p.rapidapi.com/standings/',
+    params: {
+      league: '3',
+      season: '2019'
+    },
+    headers: {
+      'X-RapidAPI-Key': '59712827fcmshac0151f05797042p1a1ed0jsn91982e933062',
+      'X-RapidAPI-Host': 'api-hockey.p.rapidapi.com'
+    }
+  };
+
 //   useEffect(() => {
 //     axios(config)
 //       .then((response) => {
