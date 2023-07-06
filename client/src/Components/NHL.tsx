@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const NHL = () => {
     
-
+const [apidata, setApidata] = useState([]);
 
   const config = {
     method: 'GET',
@@ -20,17 +20,18 @@ const NHL = () => {
     }
   };
 
-//   useEffect(() => {
-//     axios(config)
-//       .then((response) => {
-//         setApidata(response.data.response);
-//       })
-//       .catch((error) => {
-//         console.log(error);
-//       });
-//     // eslint-disable-next-line react-hooks/exhaustive-deps
-//   }, []);
+  useEffect(() => {
+    axios(config)
+      .then((response) => {
+        setApidata(response.data.response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
+  console.log(apidata);
 
   return (
     <div className="container">
