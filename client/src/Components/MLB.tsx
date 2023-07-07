@@ -11,7 +11,7 @@ const MLB = () => {
     params: {
       league: "1",
       season: "2023",
-      
+
     },
     headers: {
       "X-RapidAPI-Key": "59712827fcmshac0151f05797042p1a1ed0jsn91982e933062",
@@ -21,7 +21,7 @@ const MLB = () => {
   useEffect(() => {
     axios(config)
       .then((response) => {
-        setApidata(response.data);
+        setApidata(response.data.response);
       })
       .catch((error) => {
         console.log(error);
@@ -29,7 +29,9 @@ const MLB = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  console.log(apidata);
+  apidata.forEach((val) => {
+    console.log(val)
+  })
   return (
     <div>
       <Link className="link" to={"/"}>
