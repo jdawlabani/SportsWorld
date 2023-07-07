@@ -10,7 +10,8 @@ const MLB = () => {
     url: "https://api-baseball.p.rapidapi.com/standings",
     params: {
       league: "1",
-      season: "2020",
+      season: "2023",
+      
     },
     headers: {
       "X-RapidAPI-Key": "59712827fcmshac0151f05797042p1a1ed0jsn91982e933062",
