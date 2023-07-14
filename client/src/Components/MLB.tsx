@@ -5,12 +5,14 @@ import { Link } from "react-router-dom";
 
 const MLB = () => {
 
+  // see if anything else needs to be added to the Team type
   type Team = {
     name: String,
     wins: Number,
     losses: Number,
 
   }
+  // try generics for the team
   const [apidata, setApidata] = useState([]);
   const [standings,setStandings] = useState<Team[]>([]);
   const config = {
