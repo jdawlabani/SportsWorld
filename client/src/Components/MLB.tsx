@@ -4,8 +4,15 @@ import "../App.css";
 import { Link } from "react-router-dom";
 
 const MLB = () => {
-  const [apidata, setApidata] = useState(d[]);
-  const [standings,setStandings] = useState([]);
+
+  type Team = {
+    name: String,
+    wins: Number,
+    losses: Number,
+
+  }
+  const [apidata, setApidata] = useState([]);
+  const [standings,setStandings] = useState<Team[]>([]);
   const config = {
     method: "GET",
     url: "https://api-baseball.p.rapidapi.com/standings",
