@@ -26,8 +26,7 @@ const MLB = () => {
       .catch((error) => {
         console.log(error);
       });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  });
 
   apidata.forEach((val) => {
     console.log(val)
