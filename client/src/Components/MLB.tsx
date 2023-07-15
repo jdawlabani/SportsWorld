@@ -5,11 +5,17 @@ import { Link } from "react-router-dom";
 
 const MLB = () => {
 
-  // see if anything else needs to be added to the Team type
-  type Team = {
-    name: String,
-    wins: Number,
-    losses: Number,
+  // make a class for the team
+  class Team {
+    name: String;
+    wins: Number;
+    losses: Number;
+
+    constructor () {
+    this.name = "";
+    this.wins = 0;
+    this.losses = 0;
+    }
 
   }
 
@@ -40,9 +46,9 @@ const MLB = () => {
 
   apidata.forEach((val) => {
     console.log(val)
-    const t: Team
+    const t: Team;
     // Initialize the team using apidata then add it to standings
-    t.name = 
+    // t.name = 
     // t.wins =
     // t.losses =
 
