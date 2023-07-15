@@ -16,7 +16,6 @@ const MLB = () => {
     this.wins = 0;
     this.losses = 0;
     }
-
   }
 
   // try generics for the team
