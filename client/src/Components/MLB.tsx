@@ -39,6 +39,11 @@ const MLB = () => {
 
   apidata.forEach((val) => {
     console.log(val)
+    const t: Team
+    // Initialize the team using apidata then add it to standings
+    // t.name =
+    // t.wins =
+    // t.losses =
 
 
   })
