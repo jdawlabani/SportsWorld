@@ -46,7 +46,9 @@ const MLB = () => {
   apidata.forEach((val) => {
     console.log(val)
     const t = new Team();
-    // Initialize the team using apidata then add it to standings
+    // Initialize the team using apidata then add it to standings,
+    // TO DO: Set team with values from apidata then save them to standings
+    
     // t.name = 
     // t.wins =
     // t.losses =
