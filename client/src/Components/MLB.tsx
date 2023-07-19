@@ -19,7 +19,7 @@ const MLB = () => {
   }
 
   // try generics for the team
-  const [apidata, setApidata] = useState([]);
+  const [apidata, setApidata] = useState([Object]);
   const [standings,setStandings] = useState<Team[]>([]);
   const config = {
     method: "GET",
@@ -49,7 +49,7 @@ const MLB = () => {
     // Initialize the team using apidata then add it to standings,
     // TO DO: Set team with values from apidata then save them to standings
     
-    // t.name = val.
+
     // t.wins =
     // t.losses =
 
