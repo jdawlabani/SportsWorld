@@ -41,7 +41,7 @@ const MLB = () => {
       .catch((error) => {
         console.log(error);
       });
-  });
+  }, []);
 
   apidata.forEach((val) => {
     console.log(val)
@@ -49,7 +49,7 @@ const MLB = () => {
     // Initialize the team using apidata then add it to standings,
     // TO DO: Set team with values from apidata then save them to standings
     
-    // t.name = 
+    // t.name = val.
     // t.wins =
     // t.losses =
 
